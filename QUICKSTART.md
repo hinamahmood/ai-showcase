@@ -76,7 +76,7 @@ git add .
 git commit -m "Initial commit: AI Showcase"
 
 # Add remote (replace with your repo URL)
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git remote add origin hhttps://github.com/hinamahmood/ai-showcase
 
 # Push to GitHub
 git branch -M main

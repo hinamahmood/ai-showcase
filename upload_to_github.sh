@@ -54,7 +54,7 @@ else
     echo ""
     echo "🔗 Please provide your GitHub repository URL:"
     echo "   Example: https://github.com/username/repo-name.git"
-    read -p "Repository URL: " REPO_URL
+    read -p "Repository URL: " https://github.com/hinamahmood/ai-showcase
     
     if [ -n "$REPO_URL" ]; then
         git remote add origin "$REPO_URL"
