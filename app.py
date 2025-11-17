@@ -106,9 +106,7 @@ async def list_models():
                 )
     except httpx.RequestError as e:
         logger.error(f"Error connecting to Ollama: {e}")
-        raise HTTPException(
-            status_code=503, detail="Cannot connect to Ollama service"
-        )
+        raise HTTPException(status_code=503, detail="Cannot connect to Ollama service")
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -124,8 +122,7 @@ async def chat(request: ChatRequest):
         if request.context:
             context = "\n".join(request.context)
             prompt = (
-                f"Context:\n{context}\n\n"
-                f"Question: {request.message}\n\nAnswer:"
+                f"Context:\n{context}\n\n" f"Question: {request.message}\n\nAnswer:"
             )
 
         # Call Ollama API
@@ -153,8 +150,7 @@ async def chat(request: ChatRequest):
         raise HTTPException(
             status_code=503,
             detail=(
-                "Cannot connect to Ollama service. "
-                "Make sure Ollama is running."
+                "Cannot connect to Ollama service. " "Make sure Ollama is running."
             ),
         )
     except Exception as e:
