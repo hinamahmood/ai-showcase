@@ -59,3 +59,10 @@ htmlcov/
 .terraform/
 *.tfstate
 
+# Node.js / Serverless
+node_modules/
+package-lock.json
+# aws/package.json is auto-generated, can be ignored
+aws/package.json
+aws/unzip_requirements.py
+

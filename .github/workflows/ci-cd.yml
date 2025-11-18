@@ -93,20 +93,16 @@ jobs:
       with:
         node-version: '18'
     
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+    
     - name: Install Serverless Framework
       run: npm install -g serverless
-    
-    - name: Install Serverless plugins
-      working-directory: ./aws
-      run: |
-        npm init -y
-        npm install --save-dev serverless-python-requirements
     
     - name: Deploy to AWS Lambda
       working-directory: ./aws
       run: |
         serverless deploy --stage dev --verbose
-      continue-on-error: true
     
     - name: Deploy to AWS EC2 (if using EC2)
       run: |
