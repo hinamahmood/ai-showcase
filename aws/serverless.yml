@@ -42,4 +42,14 @@ custom:
   pythonRequirements:
     dockerizePip: true
     zip: true
+    fileName: ../requirements.txt
+
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!venv/**'
+    - '!__pycache__/**'
+    - '!*.pyc'
+    - '../app.py'
+    - '../requirements.txt'
 
