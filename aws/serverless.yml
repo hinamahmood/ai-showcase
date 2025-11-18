@@ -1,6 +1,6 @@
 service: ai-showcase
 
-frameworkVersion: '3.9'
+frameworkVersion: '3.8'
 
 provider:
   name: aws
